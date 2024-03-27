@@ -1,0 +1,566 @@
+  
+ /*-- css màu nền của trang, margin video sát viền --*/ 
+  body {
+      background - color: #1f1f1f;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+  
+ .hidden {display:none !important;}  
+ 
+ /*-- Hiệu ứng preloading trước khi vào trang --*/ 
+ .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100 % ;
+    height: 100 % ;
+    background - color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  border: 3px solid # f3f3f3;
+    border - top: 3 px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.content {
+  display: none;
+}
+ 
+ 
+ /*-- css popup modal form hien khi sau khi video tạm ngưng --*/ 
+  .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: # fefefe;
+      margin: 15 % auto;
+      padding: 20 px;
+      border: 1 px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: # aaa;
+      float: right;
+      font - size: 28 px;
+      font - weight: bold;
+  }
+
+  .close: hover,
+      .close: focus {
+          color: black;
+          text - decoration: none;
+          cursor: pointer;
+      }
+	  
+ /*-- css button login với fb twitter --*/   
+   html * {
+      font - family: 'Montserrat', sans - serif;
+      box - sizing: border - box;
+  }
+
+
+
+  .login - box {
+      background: #fff;
+      padding: 20 px;
+      max - width: 365 px;
+      margin: 5 vh auto;
+      text - align: center;
+      letter - spacing: 1 px;
+      position: relative;
+      border - radius: 3 % ;
+  }
+
+  .login - box: hover {
+      box - shadow: 0 8 px 17 px 0 rgba(0, 0, 0, 0.2), 0 6 px 20 px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .login - box h2 {
+      margin: 20 px 0 20 px;
+      padding: 0;
+      /*  text-transform: uppercase;*/
+      color: rgb(22, 24, 35);
+      font - size: 26 px;
+  }
+
+  .social - button {
+      background - position: 25 px 0 px;
+      box - sizing: border - box;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      display: inline - block;
+      height: 50 px;
+      line - height: 50 px;
+      text - align: left;
+      text - decoration: none;
+      text - transform: uppercase;
+      vertical - align: middle;
+      width: 100 % ;
+      border - radius: 3 px;
+      margin: 10 px auto;
+      outline: rgb(255, 255, 255) none 0 px;
+      padding - left: 20 % ;
+      transition: all 0.2 s cubic - bezier(0.72, 0.01, 0.56, 1) 0 s; - webkit - transition: all.3 s ease; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease;
+  }
+
+  .button - social - button {
+      background - position: 25 px 0 px;
+      box - sizing: border - box;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      display: inline - block;
+      height: 50 px;
+      line - height: 50 px;
+      text - align: left;
+      text - decoration: none;
+
+      vertical - align: middle;
+      width: 100 % ;
+      border - radius: 3 px;
+      margin: 10 px auto;
+      outline: rgb(255, 255, 255) none 0 px;
+      padding - left: 20 % ;
+      transition: all 0.2 s cubic - bezier(0.72, 0.01, 0.56, 1) 0 s; - webkit - transition: all.3 s ease; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease;
+  }
+
+
+  #
+  phobo - connect {
+      background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook.svg?sanitize=true') no - repeat scroll 5 px 0 px / 30 px 50 px padding - box border - box;
+      border: 1 px solid rgb(60, 90, 154);
+  }
+
+  #
+  button - connect {
+      background: rgb(254, 44, 85) url('#') no - repeat scroll 5 px 0 px / 30 px 50 px padding - box border - box;
+
+  }
+
+
+  #
+  phobo - connect: hover {
+      border - color: rgb(60, 90, 154);
+      background: rgb(60, 90, 154) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/facebook-white.svg?sanitize=true') no - repeat scroll 5 px 0 px / 30 px 50 px padding - box border - box; - webkit - transition: all.8 s ease - out; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease - out;
+  }
+
+  #
+  phobo - connect span {
+      box - sizing: border - box;
+      color: rgb(60, 90, 154);
+      cursor: pointer;
+      text - align: center;
+      text - transform: uppercase;
+      border: 0 px none rgb(255, 255, 255);
+      outline: rgb(255, 255, 255) none 0 px; - webkit - transition: all.3 s ease; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease;
+  }
+
+  #
+  phobo - connect: hover span {
+      color: #FFF; - webkit - transition: all.3 s ease; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease;
+  }
+
+
+
+  #
+  twitter - connect {
+      background: rgb(255, 255, 255) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter.png') no - repeat scroll 5 px 1 px / 45 px 45 px padding - box border - box;
+      border: 1 px solid rgb(85, 172, 238);
+  }
+
+  #
+  twitter - connect: hover {
+      border - color: rgb(85, 172, 238);
+      background: rgb(85, 172, 238) url('https://raw.githubusercontent.com/eswarasai/social-login/master/img/twitter-white.png') no - repeat scroll 5 px 1 px / 45 px 45 px padding - box border - box; - webkit - transition: all.8 s ease - out; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease - out;
+  }
+
+  #
+  twitter - connect span {
+      box - sizing: border - box;
+      color: rgb(85, 172, 238);
+      cursor: pointer;
+      text - align: center;
+      text - transform: uppercase;
+      border: 0 px none rgb(220, 74, 61);
+      outline: rgb(255, 255, 255) none 0 px; - webkit - transition: all.3 s ease; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease;
+  }
+
+  #
+  twitter - connect: hover span {
+      color: #FFF; - webkit - transition: all.3 s ease; - moz - transition: all.3 s ease; - ms - transition: all.3 s ease; - o - transition: all.3 s ease;
+      transition: all.3 s ease;
+  }
+
+  .or - divider {
+      display: flex;
+      align - items: center;
+      margin: 20 px 0;
+  }
+
+  .or - divider.line {
+      flex: 1;
+      height: 1 px;
+      background - color: #dbdbdb;
+  }
+
+  .or - divider.or - text {
+          padding: 0 10 px;
+          font - size: 14 px;
+          color: #999;
+}
+
+
+ /*-- css form login fb, hieu ung loading, quen pass --*/
+ 
+ .input - group {
+    position: relative;
+}
+
+.toggle - password {
+    position: absolute;
+    top: 42 % ;
+    left: 90 % ;
+    opacity: 0.6;
+    transform: translateY(-50 % );
+    cursor: pointer;
+    display: none; /* Ẩn ban đầu */
+    font - size: 12 px;
+
+    padding: 4 px;
+    border - radius: 50 % ;
+}
+
+.toggle - password: hover {
+    background: #dddfe2;
+}
+
+.login - form {
+    background - color: #fff;
+    padding: 20 px;
+    border - radius: 8 px;
+    box - shadow: 0 2 px 4 px rgba(0, 0, 0, 0.1);
+    margin: -20 px;
+}
+
+.logo {
+    text - align: center;
+    margin - bottom: 20 px;
+}
+
+.logo img {
+    width: 50 px;
+    height: auto;
+}
+
+.login - form h2 {
+    margin - bottom: 20 px;
+    text - align: center;
+    font - size: 20 px;
+}
+
+.login - form input,
+    .login - form input {
+        width: 95 % ;
+        padding: 10 px;
+        margin - bottom: 10 px;
+        border: 1 px solid# ccc;
+        border - radius: 4 px;
+    }
+
+.login - form button {
+    width: 94 % ;
+    padding: 10 px;
+    background - color: #1877f2;
+    color: # fff;
+    border: none;
+    border - radius: 4 px;
+    cursor: pointer;
+
+    place - content: center;
+    transition: 0.2 s;
+    display: grid;
+    margin - left: 10 px;
+    font - size: 16 px;
+    font - weight: bold;
+
+}
+
+.login - form button: hover {
+    background - color: #166fe5;
+}
+
+.separator {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.separator span {
+    background-color: # fff;
+    padding: 0 10 px;
+    font - size: 14 px;
+    color: #9a9a9a;
+}
+
+.login-form a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: # 1877 f2;
+    text - decoration: none;
+}
+
+.login - form a: hover {
+    text - decoration: underline;
+}
+
+.signup {
+    text - align: center;
+    margin - top: 20 px;
+}
+
+.error - message {
+    color: #ed4956;
+    font - size: 14 px;
+    line - height: 18 px;
+    padding: 15 px 0 15 px 0;
+}
+
+.loader {
+    pointer - events: none;
+    width: 19 px;
+    height: 19 px;
+    border - radius: 50 % ;
+    border: 3 px solid transparent;
+    border - top - color: #fff;
+    animation: btn - animation 1 s ease infinite;
+}
+
+@
+keyframes btn - animation {
+    0 % {
+        transform: rotate(0 turn);
+    }
+    100 % {
+        transform: rotate(1 turn);
+    }
+}
+
+ /*-- Hiệu ứng loading sau khi nhấn button login fb --*/
+ .bar {
+    width: 100 % ;
+    height: 3 px;
+    padding: 0;
+    background - color: rgba(225, 59, 59, 0.7);
+    border: none;
+    margin - top: -35 px;
+}
+.bar.loader {
+        width: 20 px;
+        height: 3 px;
+        background - image: linear - gradient(to right, rgba(250, 250, 250, 0.3), #fff);
+        animation: slide infinite 0.75 s linear;
+    }
+    .bar: hover {
+        padding: 0;
+        background - color: rgba(225, 59, 59, 0.7);
+    }
+
+@
+keyframes slide {
+    from {
+        margin - left: -20 px;
+    }
+    to {
+        margin - left: 100 % ;
+    }
+}
+
+/*-- Hiệu ứng loading tiktok sau khi submit login fb, va bắt đầu play tiếp video tạm dừng trước đó --*/
+ #
+ loadtiktok {
+
+     padding: 20 px;
+     max - width: 365 px;
+     margin: 35 vh auto;
+     text - align: center;
+     letter - spacing: 1 px;
+     position: relative;
+     border - radius: 3 % ;
+ }
+
+ abc {
+     width: 20 px;
+     aspect - ratio: 1;
+     border - radius: 50 % ;
+     display: inline - block;
+     margin: 0;
+     position: relative;
+ }
+
+ abc: nth - child(1) {
+     background: #fe2c55; - webkit - animation: clockwise 1200 ms infinite linear;
+     animation: clockwise 1200 ms infinite linear;
+ }
+
+ abc: nth - child(2) {
+         mix - blend - mode: darken;
+         background: #25f4ee;
+  margin-left: -5px;
+  -webkit-animation: counter-clockwise 1200ms infinite linear;
+          animation: counter-clockwise 1200ms infinite linear;
+}
+
+@-webkit-keyframes clockwise {
+  0% {
+    transform: translateX(0);
+    width: 20px;
+  }
+  25% {
+    width: 25px;
+  }
+  50% {
+    transform: translateX(100%);
+    width: 20px;
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    transform: translateX(0);
+    width: 20px;
+  }
+  25% {
+    width: 25px;
+  }
+  50% {
+    transform: translateX(100%);
+    width: 20px;
+  }
+}
+@-webkit-keyframes counter-clockwise {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes counter-clockwise {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+}
+
+/*-- Css vùng chứa video, responsive trên mb và pc--*/
+    body, html {
+        background - color: #1f1f1f;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    
+  /* hide menu truot */  
+::-webkit-scrollbar{height:0px;width:0px}::-webkit-scrollbar-track{-webkit-box-shadow:inset 0px 0px 0px # e0e0e0;
+        background: #fff;
+        border: 0 solid #000}::-webkit-scrollbar-thumb{-webkit-box-shadow:inset 0px 0px 0px # 15 f305;
+        background: #15f305}
+  
+ /*dành cho kích thước màn hình  dưới 1380 px*/  
+@media screen and (max-width : 1380px) {
+  .iframe {
+    align-items: center;
+    justify-content: center; 
+    height:43%;
+    width:43%
+}
+  .container {
+      height: 100vh;
+      width: auto;
+      display: flex;
+      flex-direction: column; /* Để cuộn dọc */
+      overflow-y: auto; /* Cuộn dọc */
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
+
+    .video {
+      height: 100vh;
+      width: auto;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    } 
+}
+
+/*dành cho kích thước màn hình  dưới 450px*/  
+@media screen and (max-width : 450px) {
+    .iframe {
+    align-items: center;
+    justify-content: center; 
+    height:100%;
+    width:100%
+    }
+	
+     .container {
+      height: 87vh;
+      display: flex;
+      flex-direction: column; /* Để cuộn dọc */
+      overflow-y: auto; /* Cuộn dọc */
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
+
+    .video {
+      height: 87vh;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      margin-bottom: 1px;  /* Khoảng cách giữa các video */
+    } 
+  
+  .video video {
+    display:block;
+    height:100%;
+    width: 100%;
+}
+  
+}
+
+

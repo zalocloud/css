@@ -1,0 +1,308 @@
+
+   @media screen and (min-width: 450px) {
+        .profile-container-messenger {
+            width: 315px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            color: #000000;
+            position: absolute;
+            top: 55px;
+            right: 5px;
+        }
+  
+        #avatar-profile-messenger {
+         position: relative;
+        }
+  
+         .online-status-messenger {
+         width: 20px;
+         height: 20px;
+         background-color: #4CAF50;
+         border-radius: 50%;
+         position: absolute;
+         bottom: 13px;
+         right: 99px;
+         border: 2px solid #fff;
+         }
+
+        .profile-container-messenger img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile-container-messenger h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+  
+        .profile-container-messenger h3 {
+            font-size: 11px;
+            margin: -10px 0 25px 0;
+            opacity: 0.7;
+        }
+          
+        .encrypted-status-messenger {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .icons-container-messenger {
+            display: flex;
+            justify-content: space-around;
+            margin: 0px 0px 30px 0px;
+        }
+
+        .icon-messenger {
+            width: 35px;
+            height: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .icon-messenger span {
+            margin-top: 5px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .dropdown-messenger {
+            margin: 15px 0;
+            text-align: left;
+            /*border-top: 1px solid #ddd;*/
+            padding-top: 10px;
+        }
+
+        .dropdown-title-messenger {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-title-messenger i {
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown-title-messenger.active-messenger i {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-content-messenger {
+            display: none;
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .dropdown-content-messenger.open-messenger {
+            display: block;
+        }
+  
+        .profile-container-messenger.dark-mode {
+          background: #242526;
+          color: #fff;
+          opacity: 0.8;
+        }
+     
+     /* css khung tìm kiếm tin nhắn*/
+     
+ /* CSS cho container */
+        .container-search-mess {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 23%;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            z-index: 1;
+        }
+
+        /* CSS cho thanh tìm kiếm */
+        #search-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* CSS cho wrapper chứa input và icon */
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 12px;
+            color: #888; /* Màu sắc của icon */
+            font-size: 18px;
+        }
+
+        /* CSS cho input tìm kiếm */
+        #search-input {
+            flex: 1;
+            padding: 8px 8px 8px 40px; /* Thêm padding trái để trống chỗ cho icon */
+            font-size: 16px;
+           /* border: 1px solid #ccc;*/
+            border: none;
+            border-radius: 30px; /* Bo tròn 4 góc */
+            outline: none;
+            transition: border-color 0.3s;
+            background-color: #f0f2f5;
+            max-width: 95%;
+        }
+
+        #search-input:focus {
+           /* border-color: #4CAF50; *//* Màu viền khi focus */
+          color: #000;
+        }
+
+        /* CSS cho nút xóa */
+        #clear-search {
+            position: absolute;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: #888;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.3s;
+        }
+
+        #clear-search:hover {
+            color: #f44336;
+        }
+
+        /* CSS cho danh sách kết quả tìm kiếm */
+        #search-results {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
+        }
+
+        #search-results li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+           /* border-bottom: 1px solid #ccc;*/
+            transition: background-color 0.3s;
+            max-width: 90% !important;
+        }
+
+        #search-results li:hover {
+            background-color: #f1f1f1;
+        }
+
+        #search-results .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        #search-results .message-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #search-results .sender {
+            display: none;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #000000;
+            opacity: 0.4;
+        }
+
+        #search-results .time {
+            font-size: 12px;
+            color: #777;
+        }
+
+        #search-results .content {
+            margin: 0;
+            color: #000000;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        #search-results .content.dark-mode {
+            color: #fff;
+        }
+
+        #search-results li.dark-mode:hover {
+            background-color: #3b3d3e;
+        }
+  
+       #search-input.dark-mode {
+         background-color: #333334;
+       }
+  
+       #search-input.dark-mode:focus {
+         border-color: none;
+         color: #fff; 
+       }
+  
+       .title-search-messenger.dark-mode {
+         color: #fff; 
+         opacity: 0.7; 
+       }
+  
+       .close-search-messenger {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 20px;     
+}
+  
+  .icon-close-search-messenger path.dark-mode {
+    fill: #fff; 
+   }
+
+.icon-close-search-messenger {
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+    padding: 5px; /* Tạo không gian xung quanh biểu tượng */
+    border-radius: 50%; /* Tạo hình tròn */
+    
+}
+
+.icon-close-search-messenger:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Màu nền xám nhạt khi hover */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+}
+
+.title-search-messenger {
+   margin-left: 8px; /* Khoảng cách giữa biểu tượng SVG và văn bản */
+   color: #000;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+      
+     
+     
+  }    

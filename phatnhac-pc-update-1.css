@@ -1,0 +1,382 @@
+      /* CSS cho class .hidden để ẩn phần tử */
+        .avenue-messenger {
+    transition: opacity 0.3s ease;  /* Thêm hiệu ứng chuyển đổi */
+    opacity: 1;  /* Mặc định phần tử sẽ hiển thị */
+}
+
+  /* CSS cho bottom sheet danh sách nhạc */
+        .customBottomSheet {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding-top: 40px;
+            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            transform: translateY(100%);
+            height: 200px;
+        }
+        #customBottomSheetContainer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 0px);
+            transform: translateY(100%);
+            z-index: 11;
+        }
+  
+  
+/*css bảng danh sách nhạc*/    
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        /* Nút Danh sách bài hát */
+        .toggle-btn {
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Bảng chứa bài hát */
+        .table-container {
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            /*padding: 20px;*/
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            max-height: 0; /* Ẩn toàn bộ bảng ban đầu */
+            transition: max-height 0.5s ease-out; /* Hiệu ứng trượt cho toàn bộ bảng */
+        }
+
+        /* Phần tiêu đề bảng sẽ luôn hiển thị */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        td {
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 1em;
+        }
+
+        /* Căn lề trái cho cột "Tên bài hát" */
+        td:nth-child(2) {
+            text-align: left; /* Căn lề trái cho cột thứ 2 (Tên bài hát) */
+            padding-left: 20px; /* Cách lề trái một chút để dễ nhìn */
+        }
+
+        td a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 8px 15px;
+            border: 2px solid #007BFF;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        td a:hover {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        td a .fa {
+            margin-right: 8px;
+        }
+
+        /* Media query để phù hợp với màn hình nhỏ */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+            th, td {
+                padding: 10px;
+            }
+            td a {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            th, td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+            td a {
+                font-size: 0.8em;
+            }
+        }
+  
+  
+  
+     /* css bottom sheet nghe nhạc*/
+        .bottomSheet-face {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 0;
+            box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            transform: translateY(100%);
+            height: 200px;
+        }
+        #bottomSheet-face {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 0px);
+            transform: translateY(100%);
+            z-index: 10;
+        }
+        .hidden {
+            display: none !important;
+        }
+  
+  /* css cho trình phát nhạc*/
+  html {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  padding: 0 20px 20px;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+a {
+  color: inherit;
+}
+strong {
+  font-weight: 500;
+}
+h1 {
+  font-weight: 300;
+}
+.cover-holder {
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -75px;
+  margin-top: -100px;
+  z-index: 999;
+}
+.vis-circle {
+  width: 150px;
+  height: 150px;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  z-index: 999;
+  border-radius: 50%;
+  background-size: cover;
+  will-change: transform, box-shadow;
+  transform: scale(1) translateZ(0);
+}
+.stage {
+  position: relative;
+ 
+  width: 100vw;
+  height: 100vh;
+  margin: 0 -20px 1em;
+}
+ .stage {
+   background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgSeeXiVonIkHRRjikTPR3_cVVxIUFMg-xocTF9c3dA8WfkYKUFsyKowTy-D5DogE7g4nkseBpT661GEtToCZ6Jn_7hLc31VklX4I7RKasBlDcISEvbB0hPfbx0KDceGc1aNgyoVNhgHaRzzFjQc_QKSB3l9epcD_3WZutQxeyW7yqVGh_M24SFtrejRl4/s16000/minhchi-kiyeu02.jpg');
+    background-size: cover; /* Đảm bảo hình ảnh phủ đầy trang */
+    background-position: center center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Ngừng lặp lại hình ảnh */
+    height: 100vh; /* Đảm bảo trang có chiều cao đầy đủ */
+    margin: 0; /* Loại bỏ margin mặc định của body */
+}
+
+.stage img#cover {
+  display: block;
+  width: 100%;
+  opacity: 1; /*0.25*/
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.stage .mark {
+  position: absolute;
+  bottom: 150px;
+  left: 25px;
+  color: #fff;
+  font-size: 24px;
+}
+.mark {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.stage.hover .mark .fade {
+  -webkit-mask-position-x: 0%;
+}
+.stage.hover .mark strong {
+  transform: none;
+  transition-delay: 0;
+}
+.stage.hover .mark .description {
+  transition-delay: 0.75s;
+  transition-duration: 3s;
+}
+.mark strong {
+  display: inline-block;
+  transform: translateY(100%);
+  transition: transform 1s ease;
+  transition-delay: 1.5s;
+}
+.mark p {
+  margin: 0;
+}
+.mark .fade {
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 33.33%, transparent 66.66%);
+          mask-image: linear-gradient(90deg, #000 0%, #000 33.33%, transparent 66.66%);
+  -webkit-mask-size: 300%;
+  -webkit-mask-position-x: 100%;
+  transition: -webkit-mask-position-x 2s ease;
+}
+.mark .description {
+  transition-delay: 0;
+}
+.music-visuals {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+}
+#file-input {
+  display: none;
+}
+.search {
+  position: fixed;
+  top: 10px;
+  z-index: 999;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.search audio {
+  width: 40%;
+  margin-left: 25%;
+  margin-top: 30px;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+.search audio.show {
+  opacity: 1;
+}
+.search input {
+  background: none;
+  width: 100%;
+  font-size: 90%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  height: 41px;
+  color: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: width 300ms ease;
+  display: block;
+}
+.search input:focus {
+  border-color: white;
+}
+.search .controls {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.search .controls .left {
+  flex: 1;
+}
+.search .controls button {
+  padding: 0.8rem 1rem;
+  font-size: 90%;
+  min-width: 80px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  outline: none;
+  opacity: 0.6;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: opacity 250ms ease;
+  transform: translateY(-1px);
+}
+.search .controls button:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  
+#customOpenButton,  
+#open-file,
+#show-audio,
+#hideshowchat,
+#play-btn  {
+  cursor: pointer;
+}
+  

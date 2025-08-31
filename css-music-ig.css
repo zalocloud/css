@@ -1,0 +1,207 @@
+  
+*,
+*:after,
+*:before {
+    box-sizing             : border-box;
+    -webkit-box-sizing     : border-box;
+    -moz-box-sizing        : border-box;
+    -webkit-font-smoothing : antialiased;
+    -moz-font-smoothing    : antialiased;
+    -o-font-smoothing      : antialiased;
+    font-smoothing         : antialiased;
+    text-rendering         : optimizeLegibility;
+
+}
+
+.mediPlayer .control {
+    opacity        : 0; /* transition: opacity .2s linear; */
+    pointer-events : none;
+    cursor         : pointer;
+}
+
+.mediPlayer .not-started .play, .mediPlayer .paused .play {
+    opacity : 1;
+
+}
+
+.mediPlayer .playing .pause {
+    opacity : 1;
+
+}
+
+.mediPlayer .playing .play {
+    opacity : 0;
+}
+
+.mediPlayer .ended .stop {
+    opacity        : 1;
+    pointer-events : none;
+}
+
+.mediPlayer .precache-bar .done {
+    opacity : 0;
+}
+
+.mediPlayer .not-started .progress-bar, .mediPlayer .ended .progress-bar {
+    display : none;
+}
+
+.mediPlayer .ended .progress-track {
+    stroke-opacity : 1;
+}
+
+.mediPlayer .progress-bar,
+.mediPlayer .precache-bar {
+    transition        : stroke-dashoffset 500ms;
+
+    stroke-dasharray  : 298.1371428256714;
+    stroke-dashoffset : 298.1371428256714;
+}
+.mediPlayer {
+  float: left;
+  margin: 0px;
+  cursor: pointer;  /* Thêm dòng này để hiển thị con trỏ chuột */
+  display: flex; /* Thiết lập Flexbox để căn giữa các phần tử */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  /* Đảm bảo chiều cao của .mediPlayer đủ để căn giữa nội dung */
+}
+
+.mediPlayer:hover {
+  opacity: 0.7;  /* Thêm hiệu ứng mờ (opacity) khi hover, có thể tùy chỉnh */
+}  
+  
+ 
+  .ghichu-music {
+    width: 90%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+   /* border: 1px solid #ccc;*/
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  @media only screen and (min-width: 500px) {
+    .ghichu-music {
+      max-width: 350px;
+    }
+  }
+
+  .logo {
+    margin-left: 5px;
+     margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+  }
+
+  /* Container that holds both content and play-download sections */
+  .container-music {
+    width: 90%;
+    display: flex;
+    justify-content: space-between; /* Aligns content and play-download side by side */
+    align-items: center;
+    height: 50px;
+  }
+
+  /* The content part */
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Adjust width to fit side by side */
+    height: 100%;
+  }
+
+  .phantren {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .phantren, .phanduoi {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  /* The play-download part */
+  .play-download {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%; /* Adjust width to fit side by side */
+  }
+
+  .download-music, .player-music {
+    width: 48%; /* Divides equally in the play-download section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
+  .btn-download {
+    padding: 10px 10px 10px 20px;
+    background-color: transparent;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+  }
+
+  .btn-download i {
+    margin-right: 8px;
+    opacity: 0.2;
+  }
+
+  .btn-download:hover {
+    background-color: #f4f4f473;
+    opacity: 1;
+  }
+
+  /* Play/Pause button styles */
+  .play-pause-btn {
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .scrollingText {
+    font-size: 13px;
+    color: #000000;
+  }
+
+ .time-musice {
+   margin-left: 10px;
+   font-size: 12px;
+   opacity: 0.5;
+   color: #000000;
+  }
+  
+  .name-singer {
+   opacity: 0.6; 
+  }
+  
+  #music-container {
+   width: 400px; 
+   padding: 10px 10px 20px 10px; 
+  height: 270px;         
+  overflow-y: scroll;   
+  overflow-x: hidden;  
+  padding: 10px;       
+  box-sizing: border-box;
+  }
+  #music-container::-webkit-scrollbar {
+  display: none;
+}
+ 
